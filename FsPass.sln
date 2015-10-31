@@ -1,5 +1,6 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
+# Visual Studio 2012
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{63297B98-5CED-492C-A5B7-A5B4F73CF142}"
@@ -9,15 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{63297B
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A6A6AF7D-D6E3-442D-9B1E-58CC91879BE1}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsPass", "src\FsPass\FsPass.fsproj", "{F60056AB-328F-4488-BB8F-658966982F34}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{BF60BC93-E09B-4E5F-9D85-95A519479D54}"
-	ProjectSection(SolutionItems) = preProject
-		build.fsx = build.fsx
-		README.md = README.md
-		RELEASE_NOTES.md = RELEASE_NOTES.md
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{83F16175-43B1-4C90-A1EE-8E351C33435D}"
 	ProjectSection(SolutionItems) = preProject
@@ -31,13 +23,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{8E6D
 		docs\content\tutorial.fsx = docs\content\tutorial.fsx
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{BF60BC93-E09B-4E5F-9D85-95A519479D54}"
+	ProjectSection(SolutionItems) = preProject
+		build.fsx = build.fsx
+		README.md = README.md
+		RELEASE_NOTES.md = RELEASE_NOTES.md
+	EndProjectSection
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ED8079DD-2B06-4030-9F0F-DC548F98E1C4}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsPass.Tests", "tests\FsPass.Tests\FsPass.Tests.fsproj", "{1C54D225-B56F-4290-8038-74352B6CB8DF}"
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "FsPass.Tests", "tests\FsPass.Tests\FsPass.Tests.fsproj", "{1C54D225-B56F-4290-8038-74352B6CB8DF}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsPass.Core", "src\FsPass.Core\FsPass.Core.fsproj", "{EE62A7C5-6EDF-4D7C-8FB7-7FBD5F9BB7B3}"
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "FsPass.Core", "src\FsPass.Core\FsPass.Core.fsproj", "{EE62A7C5-6EDF-4D7C-8FB7-7FBD5F9BB7B3}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsPass.Console", "src\FsPass.Console\FsPass.Console.fsproj", "{9A3E3616-B768-4077-B6EB-64964CA34211}"
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "FsPass.Console", "src\FsPass.Console\FsPass.Console.fsproj", "{9A3E3616-B768-4077-B6EB-64964CA34211}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,29 +44,25 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F60056AB-328F-4488-BB8F-658966982F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F60056AB-328F-4488-BB8F-658966982F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F60056AB-328F-4488-BB8F-658966982F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F60056AB-328F-4488-BB8F-658966982F34}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1C54D225-B56F-4290-8038-74352B6CB8DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1C54D225-B56F-4290-8038-74352B6CB8DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C54D225-B56F-4290-8038-74352B6CB8DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C54D225-B56F-4290-8038-74352B6CB8DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE62A7C5-6EDF-4D7C-8FB7-7FBD5F9BB7B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE62A7C5-6EDF-4D7C-8FB7-7FBD5F9BB7B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE62A7C5-6EDF-4D7C-8FB7-7FBD5F9BB7B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE62A7C5-6EDF-4D7C-8FB7-7FBD5F9BB7B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A3E3616-B768-4077-B6EB-64964CA34211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A3E3616-B768-4077-B6EB-64964CA34211}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A3E3616-B768-4077-B6EB-64964CA34211}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A3E3616-B768-4077-B6EB-64964CA34211}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+		{EE62A7C5-6EDF-4D7C-8FB7-7FBD5F9BB7B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE62A7C5-6EDF-4D7C-8FB7-7FBD5F9BB7B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE62A7C5-6EDF-4D7C-8FB7-7FBD5F9BB7B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE62A7C5-6EDF-4D7C-8FB7-7FBD5F9BB7B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{83F16175-43B1-4C90-A1EE-8E351C33435D} = {A6A6AF7D-D6E3-442D-9B1E-58CC91879BE1}
 		{8E6D5255-776D-4B61-85F9-73C37AA1FB9A} = {A6A6AF7D-D6E3-442D-9B1E-58CC91879BE1}
 		{1C54D225-B56F-4290-8038-74352B6CB8DF} = {ED8079DD-2B06-4030-9F0F-DC548F98E1C4}
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
