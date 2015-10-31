@@ -1,9 +1,12 @@
 source https://nuget.org/api/v2
 
+nuget Chessie
+nuget FSharp.Core
 nuget FSharp.Formatting
-nuget NUnit 
+nuget NUnit
 nuget NUnit.Runners
 nuget FAKE
+nuget PclCrypto
 nuget SourceLink.Fake
 
 github fsharp/FAKE modules/Octokit/Octokit.fsx
