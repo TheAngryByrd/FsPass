@@ -8,16 +8,7 @@ open Chessie.ErrorHandling
 open Infrastructure
 open PCLCrypto
 
-module PclCrypto =
-    let hasher256 (bytes : byte array) : byte array =
-        let sha256 =  WinRTCrypto.HashAlgorithmProvider.OpenAlgorithm(PCLCrypto.HashAlgorithm.Sha256)
-        sha256.HashData(bytes)
-       
-    let transformForKey' key data =
-            let aesProvider = WinRTCrypto.SymmetricKeyAlgorithmProvider.OpenAlgorithm(SymmetricAlgorithm.AesEcb)
-            let transformKey = aesProvider.CreateSymmetricKey key
-            let result = WinRTCrypto.CryptographicEngine.Encrypt(transformKey, data, null)
-            result
+
 module FsPassCore = 
     type FileSignature1 = 
         | FileSignature1 of uint32
@@ -254,6 +245,17 @@ module FsPassCore =
                 match d with
                 | Kdb _ -> KdbNotSupported |> fail
                 | Kdbx s -> decryptKdbxDatabase s versionInfo
+
+module PclCrypto =
+    let hasher256 (bytes : byte array) : byte array =
+        let sha256 =  WinRTCrypto.HashAlgorithmProvider.OpenAlgorithm(PCLCrypto.HashAlgorithm.Sha256)
+        sha256.HashData(bytes)
+       
+    let transformForKey' key data =
+            let aesProvider = WinRTCrypto.SymmetricKeyAlgorithmProvider.OpenAlgorithm(SymmetricAlgorithm.AesEcb)
+            let transformKey = aesProvider.CreateSymmetricKey key
+            let result = WinRTCrypto.CryptographicEngine.Encrypt(transformKey, data, null)
+            result
 
 module AppliedPCL =
    let transformKeyPcl = FsPassCore.Decryption.transformKey PclCrypto.transformForKey'
